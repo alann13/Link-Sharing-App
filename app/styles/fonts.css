@@ -1,0 +1,20 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Instrument Sans';
+  font-weight: 400;
+  src: url(../fonts/static/InstrumentSans-Regular.ttf);
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Instrument Sans';
+  font-weight: 600;
+  src: url(../fonts/static/InstrumentSans-SemiBold.ttf);
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Instrument Sans';
+  font-weight: 700;
+  src: url(../fonts/static/InstrumentSans-Bold.ttf);
+}

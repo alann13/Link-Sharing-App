@@ -1,15 +1,27 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction, LinksFunction } from '@remix-run/node'
+import loginPageStyles from '../styles/login-page.css'
+
+export const links: LinksFunction = () => {
+  return [
+    {
+      rel: 'icon',
+      href: '/favicon.png',
+      type: 'image/png',
+    },
+    { rel: 'stylesheet', href: loginPageStyles },
+  ]
+}
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
-  ];
-};
+    { title: 'Link Sharing App' },
+    { name: 'description', content: 'A link sharing app' },
+  ]
+}
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+    <div>
       <h1>Welcome to Remix</h1>
       <ul>
         <li>
@@ -37,5 +49,5 @@ export default function Index() {
         </li>
       </ul>
     </div>
-  );
+  )
 }
