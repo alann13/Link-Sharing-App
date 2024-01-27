@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: var(--primary-font), sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }

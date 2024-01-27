@@ -1,5 +1,7 @@
 import type { MetaFunction, LinksFunction } from '@remix-run/node'
+import { Form } from '@remix-run/react'
 import loginPageStyles from '../styles/login-page.css'
+import logo from '../images/logo-devlinks-large.svg'
 
 export const links: LinksFunction = () => {
   return [
@@ -21,33 +23,18 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-    </div>
+    <main>
+      <div>
+        <img className="page-logo" src={logo} alt="DevLinks Logo" />
+        <div className="login-form-ctn">
+          <h1>Login</h1>
+          <p>Add your details below to get back into the app</p>
+          <Form method="POST" className="login-form">
+            <input type="text" name="email" />
+            <input type="password" name="password" />
+          </Form>
+        </div>
+      </div>
+    </main>
   )
 }

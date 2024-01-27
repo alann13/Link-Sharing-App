@@ -1,2 +1,28 @@
+@import url(variables.css);
 @import url(reset.css);
 @import url(fonts.css);
+
+body {
+  height: 100vh;
+}
+
+main {
+  height: inherit;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-logo {
+  margin-bottom: 3.2rem;
+  margin: auto;
+}
+
+.login-form-ctn {
+  background: white;
+}
+
+.login-form-ctn form {
+  display: flex;
+  flex-direction: column;
+}

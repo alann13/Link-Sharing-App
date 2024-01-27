@@ -1,5 +1,8 @@
 {
   "name": "link-sharing-app",
+  "author": {
+    "name": "Alan"
+  },
   "private": true,
   "sideEffects": false,
   "type": "module",
