@@ -1,31 +1,28 @@
 :root {
-  --neutral-hue: 0%;
+  --neutral-hue: 0deg;
   --neutral-saturation: 0%;
-  --neutral-light-800: 20%;
-  --neutral-light-600: 45%;
-  --neutral-light-200: 85%;
-  --neutral-light-100: 98%;
-  --neutral-light: 100%;
 
   --primary-hue: 252deg;
   --primary-saturation: 100%;
-  --primary-light-400: 62%;
-  --primary-light-200: 84%;
-  --primary-light-100: 96%;
 
-  --primary-400: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-light-400));
-  --primary-200: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-light-200));
-  --primary-100: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-light-100));
+  --primary-400: hsl(var(--primary-hue), var(--primary-saturation), 62%);
+  --primary-200: hsl(var(--primary-hue), var(--primary-saturation), 84%);
+  --primary-100: hsl(var(--primary-hue), var(--primary-saturation), 96%);
 
-  --gray-800: hsl(var(--neutral-hue), var(--neutral-saturation), var(--neutral-light-800));
-  --gray-600: hsl(var(--neutral-hue), var(--neutral-saturation), var(--neutral-light-600));
-  --gray-200: hsl(var(--neutral-hue), var(--neutral-saturation), var(--neutral-light-200));
-  --gray-100: hsl(var(--neutral-hue), var(--neutral-saturation), var(--neutral-light-100));
+  --gray-800: hsl(var(--neutral-hue), var(--neutral-saturation), 20%);
+  --gray-600: hsl(var(--neutral-hue), var(--neutral-saturation), 45%);
+  --gray-200: hsl(var(--neutral-hue), var(--neutral-saturation), 85%); /* #d9d9d9 */
+  --gray-100: hsl(var(--neutral-hue), var(--neutral-saturation), 98%);
 
   --red: #ff3939;
 
   --warning: var(--red);
-  --white: hsl(0deg, 0%, var(--neutral-light-100));
+  --white: hsl(0deg, 0%, 100%);
 
   --primary-font: "Instrument Sans";
+
+  --body-text-regular: 1rem;
+  --body-text-small: 0.75rem;
+  --heading-text-regular: 2rem;
+  --heading-text-small: 1rem;
 }
