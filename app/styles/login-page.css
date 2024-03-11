@@ -48,6 +48,7 @@ h1 {
   color: var(--gray-800);
   margin-bottom: 0.25rem;
 }
+
 .login-form-ctn form input {
   border: 1px solid var(--gray-200);
   border-radius: 8px;

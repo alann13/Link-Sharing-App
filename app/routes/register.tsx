@@ -4,6 +4,7 @@ import { Form, Link } from "@remix-run/react"
 import logo from "../images/logo-devlinks-large.svg"
 import registerPageStyles from "../styles/register.page.css"
 import { checkPasswordLength, checkPasswordMatch } from "~/utils/auth"
+import TextField from "~/components/TextField/TextField"
 
 export const links: LinksFunction = () => {
   return [
@@ -41,25 +42,28 @@ export default function RegisterPage() {
           <h1>Create account</h1>
           <p>Let&apos;s get you started sharing your links!</p>
           <Form method="POST" className="login-form">
-            <label htmlFor="register-email">Email Address</label>
-            <input type="text" id="register-email" name="email" placeholder="e.g alex@email.com" required />
-
-            <label htmlFor="create-password">Create password</label>
-            <input
-              type="password"
-              id="create-password"
-              name="createPassword"
-              placeholder="At least 8 characters"
-              required
+            <TextField
+              id="register-email"
+              labelContent="Email Address"
+              labelFor="register-email"
+              name="email"
+              placeholder="e.g alex@email.com"
             />
 
-            <label htmlFor="confirm-password">Confirm password</label>
-            <input
-              type="password"
-              id="confirm-password"
+            <TextField
+              id="createPassword"
+              name="createPassword"
+              labelContent="Create password"
+              labelFor="create-password"
+              placeholder="At least 8 characters"
+            />
+
+            <TextField
+              id="confirmPassword"
+              labelContent="Confirm password"
+              labelFor="confirm-password"
               name="confirmPassword"
               placeholder="At least 8 characters"
-              required
             />
 
             <button type="submit">Create new account</button>

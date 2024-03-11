@@ -1,5 +1,4 @@
 import type { MetaFunction, LinksFunction } from "@remix-run/node"
-
 import { Form, Link } from "@remix-run/react"
 import loginPageStyles from "../styles/login-page.css"
 import logo from "../images/logo-devlinks-large.svg"
@@ -27,7 +26,7 @@ export default function Index() {
         <div className="login-form-ctn">
           <h1>Login</h1>
           <p>Add your details below to get back into the app</p>
-          <Form method="POST" className="login-form">
+          <Form method="POST" className="login-form" action="/editor/profile">
             <label htmlFor="email">Email Address</label>
             <input type="text" name="email" placeholder="e.g alex@email.com" />
             <label htmlFor="password">Password</label>
