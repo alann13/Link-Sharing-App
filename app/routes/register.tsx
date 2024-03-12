@@ -5,6 +5,8 @@ import logo from "../images/logo-devlinks-large.svg"
 import registerPageStyles from "../styles/register.page.css"
 import { checkPasswordLength, checkPasswordMatch } from "~/utils/auth"
 import TextField from "~/components/TextField/TextField"
+import { register } from "~/utils/auth.server"
+import { RegisterForm } from "~/utils/types.server"
 
 export const links: LinksFunction = () => {
   return [
@@ -23,14 +25,16 @@ export const meta: MetaFunction = () => {
 
 export async function action({ request }: ActionFunctionArgs) {
   const body = await request.formData()
-  const formData = Object.fromEntries(body)
+  const email = body.get("email") as string
+  const password = body.get("createPassword") as string
 
-  // if (checkPasswordMatch(formData['email'], confirmPassword) && checkPasswordLength(createPassword))
-  //   return redirect(`/editor/links`)
+  const user = {
+    email,
+    password,
+  }
+  const haha = await register(user)
 
-  return json({
-    error: "hi",
-  })
+  return haha
 }
 
 export default function RegisterPage() {
